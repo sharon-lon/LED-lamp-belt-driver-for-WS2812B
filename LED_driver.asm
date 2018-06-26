@@ -1,9 +1,14 @@
-;;Ê±ÐòPIN:PIN_NZR.   ÐèÒªÐÞ¸ÄÊ±£¬PIN_NZR	EQU	P1.0¡£P1.0¸ÄÎªÐèÒªµÄPIN
-;;Êý¾Ýbuf¶¨ÒåÔÚCÖÐ£¬´óÐ¡¸ù¾ÝÐèÇó¡£Ò»¸öled¶ÔÓ¦3bytes.¶¨Òå£ºUint8 idata Data_Tab[126] _at_ 0x80;
-;;¶¨ÒåµÄÊý¾ÝbufÃû³ÆÐèÒªÓë´úÂëÖÐÏàÍ¬¡£´úÂëÖÐÁ½´¦£¬Æäºó×¢ÊÍÊý¾Ýbuf¡£
-;;Êý¾Ýbuf³¤¶ÈÐÞ¸Ä£¬´úÂëÖÐÐèÒªÐÞ¸Ä¡£ÊýÖµÎª0x80+ÏÖÔÚµÄÊý¾Ý³¤¶È¡£Èç15¸öµÆ£ºÐÂÊýÖµÎª80h+22*3=0C2H¡£Ö»¸ÄÒ»´¦£¬¼û×¢ÊÍ¡£
 ;;
-;;µ÷ÓÃÇ°£¬ÏÈ°ÑÊý¾ÝÐ´ÈëÊý¾Ýbuf£¬È»ºóµ÷ÓÃLED_DRIVER();
+;;Copyright (c) 2018-2028 Sharon Lon <sharon_lon@163.com>
+;;
+;;æ—¶åºPIN:PIN_NZR.   éœ€è¦ä¿®æ”¹æ—¶ï¼ŒPIN_NZR	EQU	P1.0ã€‚P1.0æ”¹ä¸ºéœ€è¦çš„PIN
+;;æ•°æ®bufå®šä¹‰åœ¨Cä¸­ï¼Œå¤§å°æ ¹æ®éœ€æ±‚ã€‚ä¸€ä¸ªledå¯¹åº”3bytes.å®šä¹‰ï¼šUint8 idata Data_Tab[126] _at_ 0x80;
+;;å®šä¹‰çš„æ•°æ®bufåç§°éœ€è¦ä¸Žä»£ç ä¸­ç›¸åŒã€‚ä»£ç ä¸­ä¸¤å¤„ï¼Œå…¶åŽæ³¨é‡Šæ•°æ®bufã€‚
+;;æ•°æ®bufé•¿åº¦ä¿®æ”¹ï¼Œä»£ç ä¸­éœ€è¦ä¿®æ”¹ã€‚æ•°å€¼ä¸º0x80+çŽ°åœ¨çš„æ•°æ®é•¿åº¦ã€‚å¦‚15ä¸ªç¯ï¼šæ–°æ•°å€¼ä¸º80h+22*3=0C2Hã€‚åªæ”¹ä¸€å¤„ï¼Œè§æ³¨é‡Šã€‚
+;;
+;;è°ƒç”¨å‰ï¼Œå…ˆæŠŠæ•°æ®å†™å…¥æ•°æ®bufï¼Œç„¶åŽè°ƒç”¨LED_DRIVER();
+
+
 	PIN_NZR	EQU	P3.1
 
 _5NOPS MACRO 		;	TIME =4*60ns
@@ -22,7 +27,7 @@ ENDM
 
 ?PR?LED_DRIVER?LED_driver	SEGMENT CODE
 
-	EXTRN    IDATA(Data_Tab)				;Êý¾Ýbuf
+	EXTRN    IDATA(Data_Tab)				;æ•°æ®buf
 	
 	PUBLIC LED_DRIVER
 
@@ -34,7 +39,7 @@ LED_DRIVER:
 	MOV	R2,#0H
 	MOV	R3,#0H
 	
-	MOV	R0,#LOW (Data_Tab)					;Êý¾Ýbuf
+	MOV	R0,#LOW (Data_Tab)					;æ•°æ®buf
 
 	MOV A,@R0	
 	
@@ -45,7 +50,7 @@ GET_DATA_AGAIN:
 	_5NOPS
 	_5NOPS
 	
-	CJNE R0,#0C2H,NZR_BYTE	;2NOP			;Êý¾Ýbuf³¤¶È¡£0x80+Êµ¼Ê³¤¶È
+	CJNE R0,#0C2H,NZR_BYTE	;2NOP			;æ•°æ®bufé•¿åº¦ã€‚0x80+å®žé™…é•¿åº¦
 	JMP EXIT				
 NZR_BYTE:
 	SETB PIN_NZR
