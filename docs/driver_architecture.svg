@@ -1,7 +1,7 @@
 <svg width="800" height="620" xmlns="http://www.w3.org/2000/svg">
 <rect width="800" height="620" fill="white"/>
-<text x="130" y="50" font-size="28">WS2812B Driver Concept</text>
-<text x="130" y="85" font-size="18">main.c is an example/demo application, not part of the driver core</text>
+<text x="400" y="50" text-anchor="middle" font-size="28">WS2812B Driver Concept</text>
+<text x="400" y="85" text-anchor="middle" font-size="18">main.c is an example/demo application, not part of the driver core</text>
 
 <g fill="none" stroke="black" stroke-width="2">
 <rect x="220" y="130" width="360" height="70"/>
@@ -11,12 +11,12 @@
 <line x1="400" y1="330" x2="400" y2="390"/>
 </g>
 
-<g font-size="22">
-<text x="280" y="175">main.c Demo</text>
-<text x="255" y="305">LED_driver.asm</text>
-<text x="300" y="435">GPIO Output</text>
+<g font-size="22" text-anchor="middle">
+<text x="400" y="175">main.c Demo</text>
+<text x="400" y="305">LED_driver.asm</text>
+<text x="400" y="435">GPIO Output</text>
 </g>
 
-<text x="180" y="540" font-size="18">Actual driver core: LED_driver.asm</text>
-<text x="180" y="570" font-size="18">Demo code: main.c provides test LED patterns</text>
+<text x="400" y="540" text-anchor="middle" font-size="18">Actual driver core: LED_driver.asm</text>
+<text x="400" y="570" text-anchor="middle" font-size="18">Demo code: main.c provides test LED patterns</text>
 </svg>
