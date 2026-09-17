@@ -69,13 +69,13 @@ The driver uses carefully arranged instruction sequences and NOP delays to gener
 ## Data Flow Example
 
 ```
-Application code
+User Application
       |
       v
 LED color buffer
       |
       v
-LED_driver.asm
+LED_driver.asm (Driver Core)
       |
       v
 GPIO output
