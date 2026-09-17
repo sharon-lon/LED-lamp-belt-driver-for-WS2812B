@@ -1,0 +1,19 @@
+<svg width="700" height="650" xmlns="http://www.w3.org/2000/svg">
+<rect width="700" height="650" fill="white"/>
+<text x="150" y="50" font-size="28">WS2812B Driver Architecture</text>
+<g fill="none" stroke="black" stroke-width="2">
+<rect x="200" y="100" width="300" height="70"/>
+<rect x="200" y="230" width="300" height="70"/>
+<rect x="200" y="360" width="300" height="70"/>
+<rect x="200" y="490" width="300" height="70"/>
+<line x1="350" y1="170" x2="350" y2="230"/>
+<line x1="350" y1="300" x2="350" y2="360"/>
+<line x1="350" y1="430" x2="350" y2="490"/>
+</g>
+<g font-size="22">
+<text x="290" y="145">main.c</text>
+<text x="270" y="275">Data_Tab[]</text>
+<text x="235" y="405">LED_driver.asm</text>
+<text x="285" y="535">GPIO P3.1</text>
+</g>
+</svg>
