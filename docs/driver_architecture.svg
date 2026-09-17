@@ -1,22 +1,22 @@
-<svg width="800" height="620" xmlns="http://www.w3.org/2000/svg">
-<rect width="800" height="620" fill="white"/>
-<text x="400" y="50" text-anchor="middle" font-size="28">WS2812B Driver Concept</text>
-<text x="400" y="85" text-anchor="middle" font-size="18">main.c is an example/demo application, not part of the driver core</text>
-
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="700" fill="white"/>
+<text x="400" y="45" text-anchor="middle" font-size="28">WS2812B Driver Architecture</text>
+<text x="400" y="80" text-anchor="middle" font-size="18">main.c is an example/demo application, not part of the driver core</text>
 <g fill="none" stroke="black" stroke-width="2">
-<rect x="220" y="130" width="360" height="70"/>
-<rect x="220" y="260" width="360" height="70"/>
-<rect x="220" y="390" width="360" height="70"/>
-<line x1="400" y1="200" x2="400" y2="260"/>
-<line x1="400" y1="330" x2="400" y2="390"/>
+<rect x="220" y="130" width="360" height="90"/>
+<rect x="220" y="280" width="360" height="90"/>
+<rect x="220" y="430" width="360" height="90"/>
+<line x1="400" y1="220" x2="400" y2="280"/>
+<line x1="400" y1="370" x2="400" y2="430"/>
 </g>
-
 <g font-size="22" text-anchor="middle">
-<text x="400" y="175">main.c Demo</text>
-<text x="400" y="305">LED_driver.asm</text>
-<text x="400" y="435">GPIO Output</text>
+<text x="400" y="170">main.c Demo</text>
+<text x="400" y="200" font-size="16">Example Only</text>
+<text x="400" y="320">LED_driver.asm</text>
+<text x="400" y="350" font-size="16">Driver Core</text>
+<text x="400" y="470">GPIO Output</text>
+<text x="400" y="500" font-size="16">WS2812B Signal</text>
 </g>
-
-<text x="400" y="540" text-anchor="middle" font-size="18">Actual driver core: LED_driver.asm</text>
-<text x="400" y="570" text-anchor="middle" font-size="18">Demo code: main.c provides test LED patterns</text>
+<text x="400" y="590" text-anchor="middle" font-size="18">Actual driver core: LED_driver.asm</text>
+<text x="400" y="620" text-anchor="middle" font-size="18">Demo code: main.c provides test LED patterns</text>
 </svg>
